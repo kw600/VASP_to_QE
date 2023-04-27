@@ -19,7 +19,8 @@ def vasp_to_qe(path):
 				"conv_thr": 1e-6, # The convergence for the DFT self-consistency
 				"tprnfor" : True, # Print the forces
 				"tstress" : True, # Print the stress tensor
-				"pseudo_dir" : "/work/e89/e89/kw2318/pseudo_espresso"
+				"pseudo_dir" : "/work/e89/e89/kw2318/pseudo_espresso",
+				"disk_io"    : "none"
 				}
 
 	kpoints = (4,4,4) # The k-points mesh
