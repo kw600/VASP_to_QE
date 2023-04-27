@@ -1,0 +1,15 @@
+#!/bin/bash
+# Slurm job options (job-name, compute nodes, job time)
+#SBATCH --nodes=4
+#SBATCH --tasks-per-node=128
+#SBATCH --job-name=qscaild
+#SBATCH --account=e89-ic_m
+#SBATCH --partition=standard
+#SBATCH --qos=taskfarm
+#SBATCH --time=04:00:00
+
+export OMP_NUM_THREADS=1
+
+module load quantum_espresso
+
+srun --distribution=block:block --hint=nomultithread pw.x < Si.pwi > Si.pwo
