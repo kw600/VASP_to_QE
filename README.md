@@ -1,2 +1,5 @@
 # VASP_to_QE
-interface between VASP and QE input file
+#require ase package
+#interface between VASP and QE input file
+#example
+python read_vasp.py test_case
